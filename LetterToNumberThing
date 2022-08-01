@@ -1,0 +1,60 @@
+while(done=false){
+   if(message.charAt(i)=='M')
+      Encode1+="000";
+   else if(message.charAt(i)=='Y')
+      Encode1+="001";
+   else if(message.charAt(i)=='G')
+      Encode1+="002";
+   else if(message.charAt(i)=='I')
+      Encode1+="010";
+   else if(message.charAt(i)=='R')
+      Encode1+="011";
+   else if(message.charAt(i)=='L')
+      Encode1+="012";
+   else if(message.charAt(i)=='W')
+      Encode1+="020";
+   else if(message.charAt(i)=='O')
+      Encode1+="021";
+   else if(message.charAt(i)=='V')
+      Encode1+="022";
+   else if(message.charAt(i)=='E')
+      Encode1+="100";
+   else if(message.charAt(i)=='S')
+      Encode1+="101";
+   else if(message.charAt(i)=='X')
+      Encode1+="102";
+   else if(message.charAt(i)=='D')
+      Encode1+="110";
+   else if(message.charAt(i)=='Z')
+      Encode1+="111";
+   else if(message.charAt(i)=='N')
+      Encode1+="112";
+   else if(message.charAt(i)=='P')
+      Encode1+="120";
+   else if(message.charAt(i)=='A')
+      Encode1+="121";
+   else if(message.charAt(i)=='J')
+      Encode1+="122";
+   else if(message.charAt(i)=='C')
+      Encode1+="200";
+   else if(message.charAt(i)=='K')
+      Encode1+="201";
+   else if(message.charAt(i)=='T')
+      Encode1+="202";
+   else if(message.charAt(i)=='B')
+      Encode1+="210";
+   else if(message.charAt(i)=='F')
+      Encode1+="211";
+   else if(message.charAt(i)=='H')
+      Encode1+="212";
+   else if(message.charAt(i)=='Q')
+      Encode1+="220";
+   else if(message.charAt(i)=='U')
+      Encode1+="221";
+   else if(message.charAt(i)==' ')
+      Encode1+="222";
+
+   else
+      done=true;
+   i++;
+}
