@@ -1,0 +1,100 @@
+public class nicer
+{
+public static void main(String[] args)
+{
+
+String message = "BORB";
+String Encode2 ="";
+boolean done;
+for (int i = 0; i < message.length(); i = i + 3) {
+  String M = ""+ message.charAt(i) + message.charAt(i + 1) + message.charAt(i + 2);
+    if (M.equals("000")) {
+    Encode2 += 'M';
+        }
+        else if(M.equals("001")) {
+    Encode2 += 'Y';
+        }
+        else if(M.equals("002")) {
+    Encode2 += 'G';
+        }
+else if(M.equals("010")) {
+    Encode2 += 'I';
+        }
+else if(M.equals("011")) {
+    Encode2 += 'R';
+        }
+else if(M.equals("012")) {
+    Encode2 += 'L';
+        }
+else if(M.equals("020")) {
+    Encode2 += 'W';
+        }
+else if(M.equals("021")) {
+    Encode2 += 'O';
+        }
+else if(M.equals("022")) {
+    Encode2 += 'V';
+        }
+else if(M.equals("100")) {
+    Encode2 += 'E';
+        }
+else if(M.equals("101")) {
+    Encode2 += 'S';
+        }
+else if(M.equals("102")) {
+    Encode2 += 'X';
+        }
+else if(M.equals("110")) {
+    Encode2 += 'D';
+        }
+else if(M.equals("111")) {
+    Encode2 += 'Z';
+        }
+else if(M.equals("112")) {
+    Encode2 += 'N';
+        }
+else if(M.equals("120")) {
+    Encode2 += 'P';
+        }
+else if(M.equals("121")) {
+    Encode2 += 'A';
+        }
+else if(M.equals("122")) {
+    Encode2 += 'J';
+        }
+else if(M.equals("200")) {
+    Encode2 += 'C';
+        }
+else if(M.equals("201")) {
+    Encode2 += 'K';
+        }
+else if(M.equals("202")) {
+    Encode2 += 'T';
+        }
+else if(M.equals("210")) {
+    Encode2 += 'B';
+        }
+else if(M.equals("211")) {
+    Encode2 += 'F';
+        }
+else if(M.equals("212")) {
+    Encode2 += 'H';
+        }
+else if(M.equals("220")) {
+    Encode2 += 'Q';
+        }
+      else if(M.equals("221")) {
+    Encode2 += 'U';
+        }
+else if(M.equals("222")) {
+    Encode2 += ' ';
+        }
+
+
+
+
+else done = true;
+i++;
+}
+}
+}
