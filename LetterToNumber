@@ -1,0 +1,92 @@
+public class Team4CypherEncryption{
+   public static void main(String[] args){
+      char[] message = new char[];
+      String next;
+      for (i=0; i<message.length; i++){   
+         if (char[i]=='M'){
+            next="000";
+            }
+         else if (char[i]=='Y'){
+            next="001";
+            }
+         else if (char[i]=='G'){
+            next="002";
+            }
+            else if (char[i]=='I'){
+            next="010";
+            }
+
+else if (char[i]=='R'){
+            next="011";
+}
+else if (char[i]=='L'){
+            next="012";
+}
+else if (char[i]=='W'){
+            next="020";
+}
+else if (char[i]=='O'){
+            next="021";
+}
+else if (char[i]=='V'){
+            next="022";
+}
+else if (char[i]=='E'){
+            next="100";
+}
+else if (char[i]=='S'){
+            next="101";
+}
+else if (char[i]=='X'){
+            next="102";
+}
+else if (char[i]=='D'){
+            next="110";
+}
+else if (char[i]=='Z'){
+            next="111";
+}
+else if (char[i]=='N'){
+            next="112";
+}
+else if (char[i]=='P'){
+            next="120";
+}
+else if (char[i]=='A'){
+            next="121";
+}
+else if (char[i]=='J'){
+            next="122";
+}
+else if (char[i]=='C'){
+            next="200";
+}
+else if (char[i]=='K'){
+            next="201";
+}
+else if (char[i]=='T'){
+            next="202";
+}
+else if (char[i]=='B'){
+            next="210";
+}
+else if (char[i]=='F'){
+            next="211";
+}
+else if (char[i]=='H'){
+            next="212";
+}
+else if (char[i]=='Q'){
+            next="220";
+}
+else if (char[i]=='U'){
+            next="221";
+}
+else if (char[i]==' '){
+            next="222";
+}
+
+      }
+   }
+   
+}
