@@ -30,6 +30,9 @@ public class LetterSwapper{
          else if (message.charAt(i)=='A'){
             newMessage+='S';
          }
+         else if (message.charAt(i)=='S'{
+            newMessage+='A';
+         }
          else if (message.charAt(i)=='D'){
             newMessage+='F';
          }
