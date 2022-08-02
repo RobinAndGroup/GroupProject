@@ -1,0 +1,45 @@
+public class LetterSwapper{
+   public static void main(String args[]){
+      String message="ERTYUIOPASDFGHJK";
+      String newMessage="";
+      for (int i=0; i<message.length(); i++){
+         if (message.charAt(i)=='E'){
+            newMessage+='R';
+         }
+         else if (message.charAt(i)=='R'){
+            newMessage+='E';
+         }
+         else if (message.charAt(i)=='T'){
+            newMessage+='Y';
+         }
+         else if (message.charAt(i)=='Y'){
+            newMessage+='T';
+         }
+         else if (message.charAt(i)=='U'){
+            newMessage+='I';
+         }
+         else if (message.charAt(i)=='I'){
+            newMessage+='U';
+         }
+         else if (message.charAt(i)=='O'){
+            newMessage+='P';
+         }
+         else if (message.charAt(i)=='P'){
+            newMessage+='O';
+         }
+         else if (message.charAt(i)=='A'){
+            newMessage+='S';
+         }
+         else if (message.charAt(i)=='D'){
+            newMessage+='F';
+         }
+         else if (message.charAt(i)=='F'){
+            newMessage+='D';
+         }
+         else{
+            newMessage+=message.charAt(i);
+         }
+      }
+      System.out.println(newMessage);
+   }
+}
