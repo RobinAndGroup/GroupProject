@@ -1,0 +1,202 @@
+public class Encoder{
+   public static void main(String[] args){
+      //Switch e and r, t and y, u and i, o and p, a and s, and d and f;
+      String message="PORKY";
+      message+=".";
+      String Encoded1="";
+      String Encoded2="";
+      String Encoded3="";
+      int length=0;
+      boolean done=false;
+      while(!done){
+         if(message.charAt(length)=='M')
+            Encoded1+="000";
+         else if(message.charAt(length)=='Y')
+            Encoded1+="001";
+         else if(message.charAt(length)=='G')
+            Encoded1+="002";
+         else if(message.charAt(length)=='I')
+            Encoded1+="010";
+         else if(message.charAt(length)=='R')
+            Encoded1+="011";
+         else if(message.charAt(length)=='L')
+            Encoded1+="012";
+         else if(message.charAt(length)=='W')
+            Encoded1+="020";
+         else if(message.charAt(length)=='O')
+            Encoded1+="021";
+         else if(message.charAt(length)=='V')
+            Encoded1+="022";
+         else if(message.charAt(length)=='E')
+            Encoded1+="100";
+         else if(message.charAt(length)=='S')
+            Encoded1+="101";
+         else if(message.charAt(length)=='X')
+            Encoded1+="102";
+         else if(message.charAt(length)=='D')
+            Encoded1+="110";
+         else if(message.charAt(length)=='Z')
+            Encoded1+="111";
+         else if(message.charAt(length)=='N')
+            Encoded1+="112";
+         else if(message.charAt(length)=='P')
+            Encoded1+="120";
+         else if(message.charAt(length)=='A')
+            Encoded1+="121";
+         else if(message.charAt(length)=='J')
+            Encoded1+="122";
+         else if(message.charAt(length)=='C')
+            Encoded1+="200";
+         else if(message.charAt(length)=='K')
+            Encoded1+="201";
+         else if(message.charAt(length)=='T')
+            Encoded1+="202";
+         else if(message.charAt(length)=='B')
+            Encoded1+="210";
+         else if(message.charAt(length)=='F')
+            Encoded1+="211";
+         else if(message.charAt(length)=='H')
+            Encoded1+="212";
+         else if(message.charAt(length)=='Q')
+            Encoded1+="220";
+         else if(message.charAt(length)=='U')
+            Encoded1+="221";
+         else if(message.charAt(length)==' ')
+            Encoded1+="222";      
+         else
+            done=true;
+         length++;
+      }
+      int toBeMoved=(length+1)/2;
+      String substring1="";
+      String substring2="";
+      System.out.println(message);
+      // Small tweak to deal with odd length
+      for (int i=1; i<Encoded1.length(); i+=2){
+         substring1=substring1+Encoded1.charAt(i-1);
+         substring2=substring2+Encoded1.charAt(i);
+      }
+      if(Encoded1.length() % 2 == 1){
+         substring1 = substring1 + Encoded1.charAt(Encoded1.length()-1);
+      }
+      Encoded1=substring1+substring2;
+      
+      // make sure to reset substrings each time
+      substring1 = "";
+      substring2 = "";
+      
+      // No tweak needed here because all lengths at this point are divisible by 3
+      for (int i=0; i<Encoded1.length(); i+=3){
+         substring1=substring1+Encoded1.charAt(i);
+         substring2=substring2+Encoded1.charAt(i+1)+Encoded1.charAt(i+2);
+      }
+      Encoded1=substring1+substring2;
+      // make sure to reset substring1 and substring2
+      substring1 = "";
+      substring2 = "";
+      
+      // Alternate way to tweak for 4 shift
+      for (int i=0; i<Encoded1.length(); i+=4){
+         substring1=substring1+Encoded1.charAt(i);
+         for(int j=i; j < Math.min(i+4, Encoded1.length()); j++)
+         {
+            substring2=substring2+Encoded1.charAt(j);
+         }
+      }
+      Encoded2=substring1+substring2;
+
+      
+      
+      for (int i = 0; i < Encoded2.length(); i += 3) {
+          String M="";
+          // don't need to check if we are off the end here, because length is divisible by 3
+          M += Encoded2.charAt(i);
+          M+= Encoded2.charAt(i + 1);
+          M+= Encoded2.charAt(i + 2);
+          if (M.equals("000")) {
+            Encoded3 += 'M';
+          }
+          else if(M.equals("001")) {
+            Encoded3 += 'Y';
+          }
+          else if(M.equals("002")) {
+          Encoded3 += 'G';
+              }
+      else if(M.equals("010")) {
+          Encoded3 += 'I';
+              }
+      else if(M.equals("011")) {
+          Encoded3 += 'R';
+              }
+      else if(M.equals("012")) {
+          Encoded3 += 'L';
+              }
+      else if(M.equals("020")) {
+          Encoded3 += 'W';
+              }
+      else if(M.equals("021")) {
+          Encoded3 += 'O';
+              }
+      else if(M.equals("022")) {
+          Encoded3 += 'V';
+              }
+      else if(M.equals("100")) {
+          Encoded3 += 'E';
+              }
+      else if(M.equals("101")) {
+          Encoded3 += 'S';
+              }
+      else if(M.equals("102")) {
+          Encoded3 += 'X';
+              }
+      else if(M.equals("110")) {
+          Encoded3 += 'D';
+              }
+      else if(M.equals("111")) {
+          Encoded3 += 'Z';
+              }
+      else if(M.equals("112")) {
+          Encoded3 += 'N';
+              }
+      else if(M.equals("120")) {
+          Encoded3 += 'P';
+              }
+      else if(M.equals("121")) {
+          Encoded3 += 'A';
+              }
+      else if(M.equals("122")) {
+          Encoded3 += 'J';
+              }
+      else if(M.equals("200")) {
+          Encoded3 += 'C';
+              }
+      else if(M.equals("201")) {
+          Encoded3 += 'K';
+              }
+      else if(M.equals("202")) {
+          Encoded3 += 'T';
+              }
+      else if(M.equals("210")) {
+          Encoded3 += 'B';
+              }
+      else if(M.equals("211")) {
+          Encoded3 += 'F';
+              }
+      else if(M.equals("212")) {
+          Encoded3 += 'H';
+              }
+      else if(M.equals("220")) {
+          Encoded3 += 'Q';
+              }
+            else if(M.equals("221")) {
+          Encoded3 += 'U';
+              }
+      else if(M.equals("222")) {
+          Encoded3 += ' ';
+              }
+      else done = true;
+      i++;
+      }
+      System.out.println(Encoded3);
+   }
+}
