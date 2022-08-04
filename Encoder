@@ -1,7 +1,7 @@
 public class Encoder{
    public static void main(String[] args){
       //Switch e and r, t and y, u and i, o and p, a and s, and d and f;
-      String message="WAXY AND QUIVERING JOCKS FUMBLE THE PIZZA";
+      String message="PORKY";
       message+=".";
       String Encoded1="";
       String Encoded2="";
